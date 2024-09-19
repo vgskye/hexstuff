@@ -1,0 +1,20 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+# https://copier.readthedocs.io/en/stable/configuring/#the-copier-answersyml-file
+_commit: v0.0.9
+_src_path: gh:FallingColors/hexdummy
+author: Skye
+capitalize_platforms: false
+classname: HexStuff
+default_branch: main
+description: Hex Casting Stuff
+display_name: HexStuff
+github_repo: hexstuff
+hexcasting_version: 0.10.3
+homepage_url: https://hexstuff.skye.vg/
+initial_mod_version: 0.1.0
+java_version: 17
+license: MIT-0
+mappings_name: Mojmap
+modid: hexstuff
+package: vg.skye.hexstuff
+sources_url: https://github.com/vgskye/hexstuff

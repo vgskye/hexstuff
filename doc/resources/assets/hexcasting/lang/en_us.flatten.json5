@@ -1,0 +1,8 @@
+{
+  hexdoc: {
+    "hexstuff": {
+      title: "HexStuff Book",
+      description: "The HexStuff Book, all in one place.",
+    },
+  }
+}

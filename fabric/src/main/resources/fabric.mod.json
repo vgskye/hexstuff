@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "hexstuff",
+  "version": "${version}",
+  "name": "HexStuff",
+  "description": "Hex Casting Stuff",
+  "authors": [
+    "Skye"
+  ],
+  "contact": {
+    "homepage": "https://hexstuff.skye.vg/",
+    "sources": "https://github.com/vgskye/hexstuff"
+  },
+  "license": "MIT-0",
+  "icon": "icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "vg.skye.hexstuff.fabric.HexStuffFabric"
+    ],
+    "client": [
+      "vg.skye.hexstuff.fabric.HexStuffClientFabric"
+    ]
+  },
+  "mixins": [
+    "hexstuff-common.mixins.json",
+    "hexstuff.mixins.json"
+  ],
+  "depends": {
+    "minecraft": ">=${minecraftVersion}",
+    "fabricloader": ">=${fabricLoaderVersion}",
+    "fabric-api": "*",
+    "fabric-language-kotlin": ">=${fabricKotlinVersion}",
+    "architectury": ">=${architecturyVersion}",
+    "hexcasting": ">=${hexcastingVersion}"
+  }
+}
