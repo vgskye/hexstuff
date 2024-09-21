@@ -101,7 +101,7 @@ components.java {
 publishing {
     publications {
         mavenFabric(MavenPublication) {
-            artifactId = project.archivesBaseName + "-" + project.name + "-fabric"
+            artifactId = project.archivesBaseName
             from components.java
         }
     }
@@ -109,6 +109,16 @@ publishing {
     // See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
     repositories {
         // Add repositories to publish to here.
+        maven {
+            url "https://sg.storage.bunnycdn.com/skyeven"
+            credentials(HttpHeaderCredentials) {
+                name = "AccessKey"
+                value = property("skyevenToken")
+            }
+            authentication {
+                header(HttpHeaderAuthentication)
+            }
+        }
     }
 }
 
@@ -143,22 +153,25 @@ publishMods {
 //        }
 //    }
 //
-//    modrinth {
-//        accessToken = project.modrinthApiToken
-//        projectId = project.modrinthId
-//        minecraftVersions.add("1.19.2")
-//
-//        requires{
-//            slug = "fabric-api"
-//        }
-//        requires {
-//            slug = "architectury-api"
-//        }
-//        requires {
-//            slug = "fabric-language-kotlin"
-//        }
-//        requires {
-//            slug = "hex-casting"
-//        }
-//    }
+    modrinth {
+        accessToken = project.modrinthApiToken
+        projectId = project.modrinthId
+        minecraftVersions.add("1.19.2")
+
+        requires{
+            slug = "fabric-api"
+        }
+        requires {
+            slug = "architectury-api"
+        }
+        requires {
+            slug = "fabric-language-kotlin"
+        }
+        requires {
+            slug = "hex-casting"
+        }
+        requires {
+            slug = "moreiotas"
+        }
+    }
 }
