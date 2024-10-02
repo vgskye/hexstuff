@@ -5,6 +5,7 @@ import at.petrak.hexcasting.api.spell.iota.IotaType;
 import at.petrak.hexcasting.common.lib.hex.HexIotaTypes;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.Registry;
+import vg.skye.hexstuff.casting.iota.DisplayIota;
 import vg.skye.hexstuff.casting.iota.RegexIota;
 
 import java.util.HashMap;
@@ -16,6 +17,7 @@ public class HexStuffIotaTypeRegistry {
     public static Map<ResourceLocation, IotaType<?>> TYPES = new HashMap<>();
 
     public static IotaType<RegexIota> REGEX = register("regex", RegexIota.TYPE);
+    public static IotaType<DisplayIota> DISPLAY = register("display", DisplayIota.TYPE);
 
     public static void init() {
         for (Map.Entry<ResourceLocation, IotaType<?>> entry : TYPES.entrySet()) {

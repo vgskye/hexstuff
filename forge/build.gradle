@@ -53,6 +53,7 @@ dependencies {
     shadowCommon(project(path: ":common", configuration: "transformProductionForge")) { transitive = false }
 
     modImplementation "maven.modrinth:moreiotas:$moreIotasVersionForge"
+    modImplementation "maven.modrinth:hexal:$hexalVersionForge"
 
     implementation "com.google.re2j:re2j:$re2jVersion"
     include "com.google.re2j:re2j:$re2jVersion"
@@ -161,6 +162,9 @@ publishMods {
         }
         requires {
             slug = "moreiotas"
+        }
+        requires {
+            slug = "hexal"
         }
     }
 }

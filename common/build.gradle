@@ -23,6 +23,7 @@ dependencies {
     modCompileOnly "at.petra-k.paucal:paucal-common-$minecraftVersion:$paucalVersion"
     modCompileOnly "at.petra-k.hexcasting:hexcasting-fabric-$minecraftVersion:$hexcastingVersion"
     modCompileOnly "maven.modrinth:moreiotas:$moreIotasVersionFabric"
+    modCompileOnly "maven.modrinth:hexal:$hexalVersionFabric"
 
     implementation "com.google.re2j:re2j:$re2jVersion"
 }

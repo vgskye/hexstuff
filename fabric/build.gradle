@@ -38,6 +38,7 @@ dependencies {
     modImplementation("at.petra-k.hexcasting:hexcasting-fabric-${minecraftVersion}:${hexcastingVersion}") {
         // If not excluded here, calls a nonexistent method and crashes the dev client
         exclude module: "phosphor"
+//        exclude module: "lithium"
     }
 
     modImplementation "at.petra-k.paucal:paucal-fabric-${minecraftVersion}:${paucalVersion}"
@@ -57,6 +58,11 @@ dependencies {
     shadowCommon(project(path: ":common", configuration: "transformProductionFabric")) { transitive false }
 
     modImplementation "maven.modrinth:moreiotas:$moreIotasVersionFabric"
+    modImplementation "maven.modrinth:hexal:$hexalVersionFabric"
+
+    modRuntimeOnly("software.bernie.geckolib:geckolib-fabric-1.19:3.1.40") {
+        transitive false
+    }
 
     implementation "com.google.re2j:re2j:$re2jVersion"
     include "com.google.re2j:re2j:$re2jVersion"
@@ -172,6 +178,9 @@ publishMods {
         }
         requires {
             slug = "moreiotas"
+        }
+        requires {
+            slug = "hexal"
         }
     }
 }

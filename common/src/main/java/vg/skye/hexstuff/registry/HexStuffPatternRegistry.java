@@ -6,6 +6,8 @@ import at.petrak.hexcasting.api.spell.math.HexDir;
 import at.petrak.hexcasting.api.spell.math.HexPattern;
 import com.google.re2j.Pattern;
 import kotlin.Triple;
+import net.minecraft.network.chat.Style;
+import vg.skye.hexstuff.casting.patterns.display.*;
 import vg.skye.hexstuff.casting.patterns.regex.OpMakeRegex;
 import vg.skye.hexstuff.casting.patterns.regex.OpMatchRegex;
 import vg.skye.hexstuff.casting.patterns.regex.OpSetRegexFlag;
@@ -25,6 +27,16 @@ public class HexStuffPatternRegistry {
     public static HexPattern FLAG_REGEX_CASE_INSENSITIVE = register(HexPattern.fromAngles("qwawqwaqe", HexDir.EAST), "regex/flag/case_insensitive", new OpSetRegexFlag(Pattern.CASE_INSENSITIVE));
     public static HexPattern FLAG_REGEX_DOTALL = register(HexPattern.fromAngles("qwawqwaqea", HexDir.EAST), "regex/flag/dotall", new OpSetRegexFlag(Pattern.DOTALL));
     public static HexPattern FLAG_REGEX_MULTILINE = register(HexPattern.fromAngles("qwawqwaqeaa", HexDir.EAST), "regex/flag/multiline", new OpSetRegexFlag(Pattern.MULTILINE));
+
+    public static HexPattern MAKE_DISPLAY = register(HexPattern.fromAngles("awaqeeeee", HexDir.SOUTH_WEST), "display/make", new OpMakeDisplay());
+    public static HexPattern CONCAT_DISPLAY = register(HexPattern.fromAngles("awaqeeeeewd", HexDir.SOUTH_WEST), "display/concat", new OpConcatDisplay());
+    public static HexPattern COLOR_DISPLAY = register(HexPattern.fromAngles("awaqeeeeewded", HexDir.SOUTH_WEST), "display/color", new OpSetColor());
+    public static HexPattern TOOLTIP_DISPLAY = register(HexPattern.fromAngles("awaqeeeeewdew", HexDir.SOUTH_WEST), "display/tooltip", new OpSetTooltip());
+    public static HexPattern FLAG_DISPLAY_BOLD = register(HexPattern.fromAngles("awaqeeeeedd", HexDir.SOUTH_WEST), "display/flag/bold", new OpSetDisplayFlag(Style::withBold));
+    public static HexPattern FLAG_DISPLAY_ITALIC = register(HexPattern.fromAngles("awaqeeeeede", HexDir.SOUTH_WEST), "display/flag/italic", new OpSetDisplayFlag(Style::withItalic));
+    public static HexPattern FLAG_DISPLAY_UNDERLINED = register(HexPattern.fromAngles("awaqeeeeedw", HexDir.SOUTH_WEST), "display/flag/underlined", new OpSetDisplayFlag(Style::withUnderlined));
+    public static HexPattern FLAG_DISPLAY_STRIKETHROUGH = register(HexPattern.fromAngles("awaqeeeeedq", HexDir.SOUTH_WEST), "display/flag/strikethrough", new OpSetDisplayFlag(Style::withStrikethrough));
+    public static HexPattern FLAG_DISPLAY_OBFUSCATED = register(HexPattern.fromAngles("awaqeeeeeda", HexDir.SOUTH_WEST), "display/flag/obfuscated", new OpSetDisplayFlag(Style::withObfuscated));
 
     public static void init() {
         try {
