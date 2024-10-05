@@ -1,0 +1,86 @@
+{
+  "name": "hexstuff.entry.display",
+  "category": "hexcasting:patterns",
+  "icon": "minecraft:paper",
+  "sortnum": 0,
+  "advancement": "hexcasting:root",
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "hexstuff.page.display.0"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexstuff:display/make",
+      "anchor": "hexstuff:display/make",
+      "input": "str",
+      "output": "display",
+      "text": "hexstuff.page.display.make"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexstuff:display/concat",
+      "anchor": "hexstuff:display/concat",
+      "input": "display, display",
+      "output": "display",
+      "text": "hexstuff.page.display.concat"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexstuff:display/color",
+      "anchor": "hexstuff:display/color",
+      "input": "display, vec",
+      "output": "display",
+      "text": "hexstuff.page.display.color"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexstuff:display/tooltip",
+      "anchor": "hexstuff:display/tooltip",
+      "input": "display, display|item",
+      "output": "display",
+      "text": "hexstuff.page.display.tooltip"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexstuff:display/flag/bold",
+      "anchor": "hexstuff:display/flag/bold",
+      "input": "display, bool",
+      "output": "display",
+      "text": "hexstuff.page.display.flag.bold"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexstuff:display/flag/italic",
+      "anchor": "hexstuff:display/flag/italic",
+      "input": "display, bool",
+      "output": "display",
+      "text": "hexstuff.page.display.flag.italic"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexstuff:display/flag/underlined",
+      "anchor": "hexstuff:display/flag/underlined",
+      "input": "display, bool",
+      "output": "display",
+      "text": "hexstuff.page.display.flag.underlined"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexstuff:display/flag/strikethrough",
+      "anchor": "hexstuff:display/flag/strikethrough",
+      "input": "display, bool",
+      "output": "display",
+      "text": "hexstuff.page.display.flag.strikethrough"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexstuff:display/flag/obfuscated",
+      "anchor": "hexstuff:display/flag/obfuscated",
+      "input": "display, bool",
+      "output": "display",
+      "text": "hexstuff.page.display.flag.obfuscated"
+    }
+  ]
+}
