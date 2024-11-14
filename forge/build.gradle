@@ -57,6 +57,10 @@ dependencies {
 
     implementation "com.google.re2j:re2j:$re2jVersion"
     include "com.google.re2j:re2j:$re2jVersion"
+
+    modImplementation "vazkii.botania:Botania:$botaniaVersion-FORGE"
+
+    modCompileOnly "top.theillusivec4.curios:curios-forge:$minecraftVersion-$curiosVersion"
 }
 
 processResources {
@@ -162,9 +166,6 @@ publishMods {
         }
         requires {
             slug = "moreiotas"
-        }
-        requires {
-            slug = "hexal"
         }
     }
 }

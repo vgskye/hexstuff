@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.3.0
+
+- No longer hard depends on Hexal
+- Added botania interop: scrying lens is now phantom inkable
+
 ## 0.2.0
 
 - Added Display iotas.

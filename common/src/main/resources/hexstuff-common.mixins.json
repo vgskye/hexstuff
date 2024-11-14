@@ -4,11 +4,13 @@
   "compatibilityLevel": "JAVA_17",
   "minVersion": "0.8",
   "client": [
-    "HexStuffMixin"
   ],
   "mixins": [
+    "compat.botania.ItemLensMixin",
+    "compat.hexal.MoteIotaMixin"
   ],
   "injectors": {
     "defaultRequire": 1
-  }
+  },
+  "plugin": "vg.skye.hexstuff.HexStuffMixinPlugin"
 }

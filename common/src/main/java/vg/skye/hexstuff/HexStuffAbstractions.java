@@ -36,4 +36,9 @@ public class HexStuffAbstractions {
     public static void initPlatformSpecific() {
         throw new AssertionError();
     }
+
+    @ExpectPlatform
+    public static boolean isModLoaded(String id) {
+        throw new AssertionError();
+    }
 }

@@ -6,8 +6,10 @@
   "client": [
   ],
   "mixins": [
+    "compat.botania.LensCurioRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1
-  }
+  },
+  "plugin": "vg.skye.hexstuff.HexStuffMixinPlugin"
 }

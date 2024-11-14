@@ -16,4 +16,8 @@ public class HexStuffAbstractionsImpl {
     public static void initPlatformSpecific() {
         HexStuffConfigFabric.init();
     }
+
+    public static boolean isModLoaded(String id) {
+        return FabricLoader.getInstance().isModLoaded(id);
+    }
 }
