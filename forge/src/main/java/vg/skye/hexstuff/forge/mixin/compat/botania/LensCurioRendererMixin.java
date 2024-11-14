@@ -14,7 +14,7 @@ import vazkii.botania.api.item.PhantomInkable;
 
 @Mixin(LensCurioRenderer.class)
 public class LensCurioRendererMixin {
-    @Inject(method = "render", at = @At("HEAD"), cancellable = true)
+    @Inject(method = "render", at = @At("HEAD"), cancellable = true, remap = false)
     private void phantomInkLens(ItemStack stack, SlotContext slotContext, PoseStack matrixStack, RenderLayerParent<?, ?> renderLayerParent, MultiBufferSource renderTypeBuffer, int light, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch, CallbackInfo ci) {
         if (stack.getItem() instanceof PhantomInkable item && item.hasPhantomInk(stack)) {
             ci.cancel();
